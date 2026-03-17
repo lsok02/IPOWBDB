@@ -11,5 +11,6 @@ It is recommended to use:
 ### Notes
 
 - Keep the notebook as self-contained as possible
-- Install any required packages in a setup cell near the top of the notebook
+- Algorithms implementations and anything that could be extracted to Python code put in `/src`. In notebook `start.ipnyb` the repo is cloned for running on Google Colab and for the local development this part is skipped.
+- Any required packages for the Python code put inside the `requirements.txt`, and anything Jupyter NB dependant put inside some notebook's top cell.
 - Treat GitHub as the main place for sharing and syncing changes
