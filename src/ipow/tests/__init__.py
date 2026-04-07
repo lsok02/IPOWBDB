@@ -6,6 +6,7 @@ from .statistical import (
     kolmogorov_smirnov_uniform_test,
     approximate_entropy_test,
 )
+from .visual import run_visual_tests
 
 __all__ = [
     "ValidationConfig",
@@ -15,4 +16,5 @@ __all__ = [
     "chi_square_uniform_test",
     "kolmogorov_smirnov_uniform_test",
     "approximate_entropy_test",
+    "run_visual_tests",
 ]

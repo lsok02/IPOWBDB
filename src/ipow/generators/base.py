@@ -12,15 +12,19 @@ class RandomGenerator(Protocol):
 
     def random_uint64(self, size: int) -> list[int]:
         """Return ``size`` unsigned 64-bit integers."""
+        ...
 
     def random_bytes(self, nbytes: int) -> bytes:
         """Return ``nbytes`` random bytes."""
+        ...
 
     def random_bits(self, nbits: int) -> list[int]:
         """Return a list of 0/1 bits."""
+        ...
 
     def random_floats(self, size: int) -> list[float]:
         """Return ``size`` floats in the interval [0, 1)."""
+        ...
 
 
 @dataclass(slots=True)

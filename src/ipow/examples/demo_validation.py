@@ -18,7 +18,7 @@ from generators import (
     PCG64Generator,
     SystemCSPRNG,
 )
-from tests import ValidationConfig, validate_generator
+from tests import ValidationConfig, validate_generator, run_visual_tests
 
 
 def main() -> None:
@@ -34,6 +34,9 @@ def main() -> None:
     cfg = ValidationConfig(n_numbers=5000, n_bits=10000)
     results = [validate_generator(gen, cfg) for gen in generators]
     print(json.dumps(results, indent=2))
+
+    # for gen in generators:
+    #     run_visual_tests(gen)
 
 
 if __name__ == "__main__":
