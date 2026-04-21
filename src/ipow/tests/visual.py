@@ -4,6 +4,9 @@ import numpy as np
 
 def run_visual_tests(generator, n_samples: int = 100_000) -> None:
     """Runs visual tests for the given generator."""   
+    if n_samples < 2:
+        raise ValueError("n_samples must be >= 2 for scatter plot analysis")
+
     # Matplotlib figure init
     fig, axs = plt.subplots(2, 2, figsize=(12, 10))
     fig.suptitle(f"Analiza wizualna generatora: {generator.name}", fontsize=16)
@@ -18,9 +21,10 @@ def run_visual_tests(generator, n_samples: int = 100_000) -> None:
     axs[0, 0].set_xlim(0, 1)
 
     # 2. Scatter plot 2D - spectral analysis (x_n vs x_{n+1})
-    # Limit the sample to the first 2000 values
-    x_n = floats[:2000]
-    x_n1 = floats[1:2001]
+    # Use up to 2000 adjacent pairs, but support smaller samples as well.
+    pair_count = min(len(floats) - 1, 2000)
+    x_n = floats[:pair_count]
+    x_n1 = floats[1 : pair_count + 1]
     axs[0, 1].scatter(x_n, x_n1, s=2, color='darkblue', alpha=0.5)
     axs[0, 1].set_title("Scatter plot 2D (x_n vs x_{n+1})")
     axs[0, 1].set_xlim(0, 1)
