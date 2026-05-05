@@ -13,6 +13,8 @@ from .jsf32 import JSF32
 from .chacha20rng import ChaCha20RNG
 from .hccsrng import HCCSRNG
 from .anu_qrng import ANUVacuumQRNG
+from .philox import Philox
+from .threefry import Threefry
 
 __all__ = [
     "LCGGenerator",
@@ -30,4 +32,6 @@ __all__ = [
     "ChaCha20RNG",
     "HCCSRNG",
     "ANUVacuumQRNG",
+    "Philox",
+    "Threefry",
 ]
