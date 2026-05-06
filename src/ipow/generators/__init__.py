@@ -13,6 +13,11 @@ from .jsf32 import JSF32
 from .chacha20rng import ChaCha20RNG
 from .hccsrng import HCCSRNG
 from .anu_qrng import ANUVacuumQRNG
+from .philox import Philox
+from .threefry import Threefry
+from .mrg32k3a import MRG32k3a
+from .hccsrng import HCCSRNG
+from .anu_qrng import ANUVacuumQRNG
 from .hccsrng import HCCSRNG
 
 __all__ = [
@@ -29,6 +34,11 @@ __all__ = [
     "BlumBlumShub",
     "JSF32",
     "ChaCha20RNG",
+    "HCCSRNG",
+    "ANUVacuumQRNG",
+    "Philox",
+    "Threefry",
+    "MRG32k3a",
     "HCCSRNG",
     "ANUVacuumQRNG",
     "HCCSRNG",
