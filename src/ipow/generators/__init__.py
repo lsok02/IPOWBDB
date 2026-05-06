@@ -16,6 +16,9 @@ from .anu_qrng import ANUVacuumQRNG
 from .philox import Philox
 from .threefry import Threefry
 from .mrg32k3a import MRG32k3a
+from .hccsrng import HCCSRNG
+from .anu_qrng import ANUVacuumQRNG
+from .hccsrng import HCCSRNG
 
 __all__ = [
     "LCGGenerator",
@@ -36,4 +39,7 @@ __all__ = [
     "Philox",
     "Threefry",
     "MRG32k3a",
+    "HCCSRNG",
+    "ANUVacuumQRNG",
+    "HCCSRNG",
 ]
