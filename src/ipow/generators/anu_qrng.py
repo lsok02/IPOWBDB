@@ -24,7 +24,7 @@ class ANUVacuumQRNG:
     timeout_sec: float = 20.0
     max_chunk: int = 1024
     record_downloads: bool = True
-    cache_path: Path | str = "quantum_cache.bin"
+    cache_path: Path | str = Path(__file__).parent / "quantum_cache.bin"
 
     _byte_buffer: bytearray = field(default_factory=bytearray, init=False, repr=False)
     _download_log: bytearray = field(default_factory=bytearray, init=False, repr=False)
@@ -33,6 +33,7 @@ class ANUVacuumQRNG:
 
     def __post_init__(self) -> None:
         # Przy starcie zawsze wczytujemy WSZYSTKO co mamy na dysku do RAMu
+        self.cache_path = Path(self.cache_path).resolve()
         self._load_full_cache()
 
     def _load_full_cache(self) -> None:
