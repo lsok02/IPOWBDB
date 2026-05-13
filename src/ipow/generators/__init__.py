@@ -19,6 +19,7 @@ from .mrg32k3a import MRG32k3a
 from .hccsrng import HCCSRNG
 from .anu_qrng import ANUVacuumQRNG
 from .hccsrng import HCCSRNG
+from .mod_exp_feistel_rng import ModExpFeistelRNG
 
 __all__ = [
     "LCGGenerator",
@@ -42,4 +43,5 @@ __all__ = [
     "HCCSRNG",
     "ANUVacuumQRNG",
     "HCCSRNG",
+    "ModExpFeistelRNG",
 ]
