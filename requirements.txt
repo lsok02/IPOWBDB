@@ -15,10 +15,13 @@ kiwisolver==1.5.0
     # via matplotlib
 matplotlib==3.10.8
     # via ipow
+nistrng==1.2.3
+    # via ipow
 numpy==2.4.3
     # via
     #   contourpy
     #   matplotlib
+    #   nistrng
     #   pandas
     #   scipy
 packaging==26.0
@@ -36,7 +39,9 @@ python-dateutil==2.9.0.post0
     #   matplotlib
     #   pandas
 scipy==1.17.1
-    # via ipow
+    # via
+    #   ipow
+    #   nistrng
 six==1.17.0
     # via python-dateutil
 tzdata==2026.2 ; sys_platform == 'emscripten' or sys_platform == 'win32'

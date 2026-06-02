@@ -9,6 +9,7 @@ dependencies = [
     "matplotlib>=3.10.8",
     "scipy>=1.17.1",
     "pandas>=3.0.3",
+    "nistrng>=1.2.3",
 ]
 
 [dependency-groups]
