@@ -2,13 +2,14 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import secrets
 
 
 @dataclass
 class LogisticMapGenerator:
-    x0: float = 0.123456789
+    x0: float = secrets.randbits(53) / 2**53
     r: float = 3.99
-    discard: int = 100
+    discard: int = 2000
     name: str = "LogisticMap"
 
     def __post_init__(self) -> None:
